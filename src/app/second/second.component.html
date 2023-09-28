@@ -1,1 +1,14 @@
 <p>second works!</p>
+
+<h1>Reactive Form</h1>
+<label for="color">color
+    <input type="text"  [formControl]="color">
+</label>
+<p>{{color.value}}</p>
+
+<h1>Template Driven From</h1>
+<label for="name">
+    <input type="text" [(ngModel)]="name">
+</label>
+<p>{{name}}</p>
+<h3><a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to HomePage</a></h3>
