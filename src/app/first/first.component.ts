@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ChannelService} from '../services/channel.service'
 
 @Component({
   selector: 'app-first',
@@ -7,17 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstComponent implements OnInit {
 
-  title = 'I am practicing Angular js'
+  title = 'Pass value into serivces'
   items = ['Iqbal', 'masud', 'parveh'];
 
-  constructor() { }
+  constructor(private chService: ChannelService) { }
   
   ngOnInit(): void{
     this.textFunc()
+    this.passValueToService()
   }
 
   textFunc() {
     return this.title;
   }
 
+  message() {
+    return this.chService.display();
+  }
+  passValueToService() {
+    return this.chService.getValueFromCom(this.title);
+  }
 }
