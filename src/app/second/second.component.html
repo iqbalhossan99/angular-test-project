@@ -1,5 +1,5 @@
 <p>second works!</p>
-
+<!-- 
 <h1>Reactive Form</h1>
 <label for="color">color
     <input type="text"  [formControl]="color">
@@ -10,5 +10,18 @@
 <label for="name">
     <input type="text" [(ngModel)]="name">
 </label>
-<p>{{name}}</p>
+<p>{{name}}</p> -->
+
+<form [formGroup] = 'myFrom' (ngSubmit)="onSubmit()">
+    <label for="username">User Name
+        <input type="text" formControlName="userName">
+    </label><br><br>
+    <label for="password">Password
+        <input type="text" formControlName="password">
+    </label>
+    <button type="submit">Submit</button>
+</form>
+
+<p>{{myFrom.value | json}}</p>
+
 <h3><a [routerLink]="['/']" routerLinkActive="router-link-active" >Back to HomePage</a></h3>
