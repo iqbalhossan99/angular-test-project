@@ -2,5 +2,17 @@
 <h1 *ngIf="title">{{title}}</h1>
 
 <h2>Student list</h2>
-<ul *ngFor="let item of items"><li><p>{{item}}</p></li></ul>
+<ul *ngFor="let item of items">
+    <li>
+        <p>{{item}}</p>
+    </li>
+</ul>
 <h1>{{message()}}</h1>
+
+<ul>
+    <li><a [routerLink]="['/fa-a']" routerLinkActive="router-link-active">fa-a</a></li>
+    <li><a [routerLink]="['/fs-b']" routerLinkActive="router-link-active">fs-b</a></li>
+
+</ul>
+
+<router-outlet></router-outlet>

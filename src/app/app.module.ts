@@ -7,13 +7,9 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FaAComponent } from './fa-a/fa-a.component';
-import { FaBComponent } from './fa-b/fa-b.component';
+import { FsBComponent } from './fs-b/fs-b.component';
 
-const routes: Routes = [{
-  path:'', component: FirstComponent
-}, {
-  path:'second', component: SecondComponent
-}]
+
 
 @NgModule({
   declarations: [
@@ -21,11 +17,12 @@ const routes: Routes = [{
     FirstComponent,
     SecondComponent,
     FaAComponent,
-    FaBComponent
+    FsBComponent,
+    
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

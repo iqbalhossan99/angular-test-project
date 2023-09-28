@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FaBComponent } from './fa-b.component';
+import { FsBComponent } from './fs-b.component';
 
-describe('FaBComponent', () => {
-  let component: FaBComponent;
-  let fixture: ComponentFixture<FaBComponent>;
+describe('FsBComponent', () => {
+  let component: FsBComponent;
+  let fixture: ComponentFixture<FsBComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FaBComponent]
+      declarations: [FsBComponent]
     });
-    fixture = TestBed.createComponent(FaBComponent);
+    fixture = TestBed.createComponent(FsBComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
